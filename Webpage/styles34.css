@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* andrea font*/
+
+@font-face{
+	font-family:"FancyCursive";
+	src: url("style-script/StyleScript-Regular.ttf");
+}
+
+
+/*Index font*/
+
+/*h2*/
+@font-face{
+	font-family:"BesleySemi";
+	src: url("besley/Besley-SemiBold.ttf");
+}
+
+/*p tag*/
+@font-face{
+	font-family:"CothamSans" ;
+	src: url("cotham-sans/CothamSans.otf");
+}
+

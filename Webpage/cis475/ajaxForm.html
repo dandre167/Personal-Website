@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Month Days Quiz</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+	body {
+		background-color: #0077be;
+		font-family: Arial, sans-serif;
+		color: white;
+	}
+	h1, p {
+		margin: 0;
+		padding: 20px;
+		text-align: center;
+		animation: fadeIn 1s ease-in;
+	}
+	form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* align vertically as well */
+  margin: 0 auto; /* center horizontally */
+  max-width: 400px; /* set a maximum width to the form */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color:#86BBD8;
+  animation: slideUp 1s ease-in-out;
+}
+
+	label, input, button {
+		font-size: 1.2em;
+		padding: 10px;
+		border: none;
+		background-color: #ffffff;
+		color: #0077be;
+		margin: 10px;
+		border-radius: 5px;
+		box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+		animation: fadeIn 1s ease-in;
+	}
+	button {
+		cursor: pointer;
+		background-color: #0077be;
+		color: white;
+		transition: background-color 0.5s ease-in-out;
+		animation: fadeIn 1s ease-in;
+	}
+	button:hover {
+		background-color: #004466;
+	}
+	#result {
+		text-align: center;
+		margin-top: 20px;
+		animation: slideDown 1s ease-in-out;
+	}
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@keyframes slideUp {
+		from {
+				transform: translateY(50%);
+			}
+			to {
+				transform: translateY(0);
+			}
+		}
+		@keyframes slideDown {
+			from {
+				transform: translateY(-50%);
+			}
+			to {
+				transform: translateY(0);
+			}
+		}
+	</style>
+<body>	
+	
+	<form id="quiz-form">
+		<h1>Month Days Quiz</h1>
+		<p>What month has the most days?</p>
+		<label for="answer">Answer:</label>
+		<input type="text" id="answer" name="answer">
+		<button type="submit">Submit</button>
+			<div id="result"></div>
+	</form>
+	
+	<script>
+		$(document).ready(function() {
+			$("#quiz-form").submit(function(event) {
+				event.preventDefault();
+				var answer = $("#answer").val();
+				$.ajax({
+					method: "POST",
+					url: "ajax.php",
+					data: { answer: answer },
+					dataType: "json"
+				})
+				.done(function(response) {
+    if (response.correct) {
+        var month = new Date(Date.parse("2023-" + response.month + "-01")).toLocaleString('default', { month: 'long' });
+        $("#result").html("Congratulations! " + month + " has the most days.");
+    } else {
+        $("#result").html("Oops! " + response.message);
+    }
+})
+				.fail(function() {
+					$("#result").html("An error occurred. Please try again.");
+				});
+			});
+		});
+	</script>
+
+</body>
+</html>
+
+
+
+

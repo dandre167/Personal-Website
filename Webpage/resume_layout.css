@@ -1,0 +1,81 @@
+html {
+  height: 100%;
+  background-image: url(https://images.photowall.com/products/60721/white-marble-3.jpg?h=699&q=85);
+}
+
+/*
+body {
+   width: 95%;
+	min-width: 640px;
+   max-width: 960px;
+   margin-left: auto;
+   margin-right: auto;
+   min-height: 100%;
+
+}
+*/
+
+
+footer {
+
+  background-color: black;
+}
+
+.footer_contact,
+.footer_services,
+.nod {
+  color: whitesmoke;
+}
+
+
+.nod {
+  list-style-type: none;
+}
+
+/*nav style*/
+
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+.education {
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.pro-experience {
+  display: inline-block;
+  padding-bottom: 45px;
+}
+
+
+
+h1 {
+  text-align: center;
+}

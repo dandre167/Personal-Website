@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" id="home" style="background-color: #FF9B42;">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+
+  <script src="clock.js" defer></script>
+
+  <link rel="stylesheet" type="text/css" href="styles34.css">
+
+  <title>Welcome to my Portifolio</title>
+  <style>
+    .card {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      overflow: hidden;
+    }
+
+
+
+    .card-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: calc(100% - 200px);
+    }
+
+    .card-content h3 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .card-content p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .card-content a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #EDDEA4;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .card-content a:hover {
+      background-color: #0056b3;
+    }
+
+
+
+    footer {
+      background-color: #333;
+      color: #EDDEA4;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .icon-row a {
+      color: #EDDEA4;
+      font-size: 24px;
+      margin: 0 10px;
+    }
+
+    .copy-right {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #EDDEA4;
+      height: 80px;
+      padding: 0 50px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 120px;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin-left: 40px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    a:hover {
+      color: #ff6600;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      width: 95%;
+      min-width: 640px;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 15px 5px rgba(31, 73, 125, 0.8);
+
+    }
+  </style>
+
+</head>
+
+<body onload="startTime()">
+
+  <!--    <header> Dandre's Professional website</header>
+ -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li> <a href="portfolio.html">Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <br>
+  <br>
+
+  <!--  introductioin part of the page try to insert an image of your self but also add icons within the p tags or before them-->
+
+
+  <div class="time" style="text-align: center;">
+    <p> Todays date: </p>
+    <div id="date"></div>
+    <div id="time"></div>
+  </div>
+
+  <br>
+
+
+  <div class="card">
+    <div class="card-content">
+      <h3>Atlas by Andrea</h3>
+      <p>first website side with html and css to make a pottery website showing pictures of Andreas creations </p>
+      <a href="upcomingpage.html" target="_blank">Click me </a>
+    </div>
+  </div>
+
+
+
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+  <footer class="transition_color" style="padding-top: 25px;padding-bottom: 75px;">
+
+    <div class="icon-row">
+      <a href="https://www.instagram.com/dre_the_don_/" target="_blank"><i class="fi-xnsuxl-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/dandre-johnson---/" target="_blank"> <i class="fi-snsuxl-linkedin"></i></i></a>
+      <a href="mailto:dandre.johnson1221@gmail.com" target="_blank"><i class="fi-xwsuxl-envelope-solid"></i></a>
+    </div>
+    <div class="copy-right">
+      &copy; Thank you for visiting my Website
+    </div>
+
+
+  </footer>
+</body>
+
+</html>
